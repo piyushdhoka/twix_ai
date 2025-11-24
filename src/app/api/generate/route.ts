@@ -16,7 +16,10 @@ export async function POST(req: Request) {
         }
     })
 
-    if (!session && ipResult) {
+    // Temporarily disabled for development - remove this condition in production
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    
+    if (!session && ipResult && !isDevelopment) {
         return Response.json(
             { success: false, message: 'Credit limit reached, signup to get more credits!' },
             { status: 401 }

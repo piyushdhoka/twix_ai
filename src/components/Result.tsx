@@ -48,7 +48,7 @@ export default function Result({ improvePrompt, isImprovingField, setImproveProm
 
                 <TooltipProvider>
                     <Tooltip>
-                        <TooltipTrigger>
+                        <TooltipTrigger asChild>
                             <button onClick={saveInteraction} className="bg-transparent rounded-lg before:bg-opacity-5 backdrop-blur-lg border border-gray-400/50 dark:border-white/20 dark:text-white p-2 max-sm:p-1 max-sm:px-1.5 hover:bg-white/10 transition-all duration-300">
                                 <FaHeart className="w-3 h-3" />
                             </button>
@@ -62,7 +62,7 @@ export default function Result({ improvePrompt, isImprovingField, setImproveProm
                 <TooltipProvider>
                     <Tooltip>
                         <Link href={`https://twitter.com/intent/tweet?text=${result}`} target="_blank">
-                            <TooltipTrigger>
+                            <TooltipTrigger asChild>
                                 <button className="bg-transparent rounded-lg before:bg-opacity-5 backdrop-blur-lg border border-gray-400/50 dark:border-white/20 dark:text-white p-2 max-sm:p-1 max-sm:px-1.5 hover:bg-white/10 transition-all duration-300">
                                     <RiTwitterXLine className="w-3 h-3" />
                                 </button>
